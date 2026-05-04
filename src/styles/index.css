@@ -1,11 +1,76 @@
-/* 
+.titulo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 7rem;
+  letter-spacing: 3px;
+  color: #ead3d3;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-    You can write your own styles here...
+.input-todo {
+    font-size: 1.6rem;
+    height: 4.5rem;
+    font-weight: 300;
+    color: lightgrey;
+    padding-left: 4rem;
+    padding-right: 3rem;
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+}
 
-*/
+
+.todo-item {
+  height: 4.5rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #848282;
+  padding-left: 3rem;
+  padding-right: 1.5rem;
+}
+
+
+.input-todo::placeholder {
+    color: grey
+}
+
+.todo-footer {
+    color: lightgrey;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 
+              0 8px 0 -3px #f6f6f6, 
+              0 9px 1px -3px rgba(0, 0, 0, 0.2), 
+              0 16px 0 -6px #f6f6f6, 
+              0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+.todo-action {
+    cursor: pointer;
+}
+
+.error-text {
+    color: red;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 20px;
+    font-size: medium;
+    background-color: white;
+}
+
+.list-group {
+    background-color: white;
+    color: grey;
+    padding-left: 16px;
+    width: 590px;
+}
+
+.py-3 {
+    background-color: white;
+}
+ 
+.check-icon {
+    display: flex;
+    gap: 14px; 
+}
