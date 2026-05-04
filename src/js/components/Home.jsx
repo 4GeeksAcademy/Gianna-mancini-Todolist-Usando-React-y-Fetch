@@ -7,7 +7,7 @@ import TodoFooter from "./TodoFooter"
     const user = "Gianna";
 	const API_URL = "https://playground.4geeks.com/todo";
 
-	const initialTodos = [] 
+	const initialTodos = []  
 
 const Home = () => { 
 	const [TodosFromAPI, setTodosFromAPI] = useState(initialTodos);
@@ -46,6 +46,22 @@ const Home = () => {
 		await fetch(url, options)
 		setLoading(false)
 		await fetchTodos()
+	}
+
+	const _fetchTodos = async () => {
+		try {
+			const response = await fetch (`${API_URL}/user/${user}`);
+			const data = await response.json();
+
+			setTodosFromAPI(data.todos)
+		}
+		catch(error) {
+			setError(error.message)
+		}
+
+		finally {
+			setLoading(false)
+		}
 	}
 
 	const fetchTodos = async () => {
